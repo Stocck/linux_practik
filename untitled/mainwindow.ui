@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>836</width>
+    <height>578</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Метод итераций</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>320</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Получить ответ</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>461</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_0">
+       <item>
+        <widget class="QLabel" name="labelStartPoint">
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Точка старта поиска корня</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>70</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="startPoint">
+         <property name="text">
+          <string>10000</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_1">
+       <item>
+        <widget class="QLabel" name="labelMaxCount">
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Максимальное кол-во итераций</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>38</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="maxCount">
+         <property name="text">
+          <string>10000</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="labelAccuracy">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Допустимая точность</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>98</width>
+           <height>10</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="accuracy">
+         <property name="inputMethodHints">
+          <set>Qt::ImhDigitsOnly</set>
+         </property>
+         <property name="text">
+          <string>0.001</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="labelAnswer">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Значение x: </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="answer">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="labelAnswerCount">
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Кол-во итераций: </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="answerCount">
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="labelAnswerAccuracy">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Полученая точность:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="answerAccuracy">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>360</y>
+      <width>481</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Примечание: для уравнения 9ln(x)-2x=0 &lt;br/&gt;решение будет единственным и больше 4.5.&lt;br/&gt;Это следует из теоремы &lt;br/&gt;Пусть f(x) = 0 и существует x = v(x) и диффиренциируема на отрезке [a,b].&lt;br/&gt;тогда если |dv(x)/dx| &amp;lt; 1 &lt;/p&gt;&lt;p&gt;1) процесс итерации x&lt;span style=&quot; vertical-align:sub;&quot;&gt;k+1 &lt;/span&gt;= v(x&lt;span style=&quot; vertical-align:sub;&quot;&gt;k&lt;/span&gt;) где k - натуральное число, &lt;br/&gt;сходится не зависимо от начального значения x принадлежащего отрезку [a,b]&lt;br/&gt;2) предельное значение x равное пределу при к стремящимся к бесконечности от x&lt;span style=&quot; vertical-align:sub;&quot;&gt;k&lt;/span&gt;. &lt;br/&gt;Является единственным решением уравненея f(x)=0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::MarkdownText</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>836</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Плигин Михаил</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_3_35_21">
+    <property name="title">
+     <string>М3О-35Б-21</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_3_35_21"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
